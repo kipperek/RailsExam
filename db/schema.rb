@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511104002) do
+ActiveRecord::Schema.define(version: 20140512180058) do
 
   create_table "gists", force: true do |t|
     t.text     "snippet"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20140511104002) do
     t.string   "date"
     t.string   "owner"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

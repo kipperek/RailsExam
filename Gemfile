@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 1.2'
 
 #kolorowanie
 gem 'pygments.rb'
+#logowanie git
+gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
