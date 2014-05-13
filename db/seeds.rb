@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+for i in 0..50
+Gist.create(snippet:'#include <stdio.h>
+int main()
+{
+int a = 22;
+int b = 12;
+
+printf("%i",a*b);
+
+return 0;
+}', lang:'c',description:'C')
+end
