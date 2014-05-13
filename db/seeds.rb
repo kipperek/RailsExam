@@ -15,5 +15,10 @@ int b = 12;
 printf("%i",a*b);
 
 return 0;
-}', lang:'c',description:'C')
+}', lang:'c',description:'C',owner:'CŁOP' )
+end
+
+for i in 0..50
+Post.create(content:'Projekt zespolowy w Ruby :)',
+date:'13.05.2014',owner:'CŁOP',description:'Post')
 end
