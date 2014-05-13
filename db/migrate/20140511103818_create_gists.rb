@@ -5,7 +5,7 @@ class CreateGists < ActiveRecord::Migration
       t.string :lang
       t.string :description
       t.string :owner
-
+      
       t.timestamps
     end
   end
