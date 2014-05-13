@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    # @posts = Post.order(:created_at).page(params[:page]) # pagination
-    @posts = Post.all
+    @posts = Post.order(:created_at).page(params[:page]) # pagination
+    # @posts = Post.all
   end
 
   # GET /posts/1
