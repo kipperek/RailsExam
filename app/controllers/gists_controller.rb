@@ -26,6 +26,7 @@ class GistsController < ApplicationController
   # POST /gists.json
   def create
     @gist = Gist.new(gist_params)
+    @gist.user = User.find(session[:user_id])
 
     respond_to do |format|
       if @gist.save
@@ -70,6 +71,6 @@ class GistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gist_params
-      params.require(:gist).permit(:snippet, :lang, :description, :owner)
+      params.require(:gist).permit(:snippet, :lang, :description)
     end
 end

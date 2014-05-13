@@ -10,10 +10,6 @@
   <%= @post.date %>
 </p>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @post.owner %>
-</p>
 
 <p>
   <strong>Description:</strong>
@@ -23,8 +19,11 @@
 <p>
   <strong>User:</strong>
   <%- if(@post.user) %>
-  <%=  @post.user.name %>
+  <%- if(!@post.user.name.blank?) %>
+    <%=  @post.user.name %>
   <%- else %>
+    <%=  @post.user.nick %>
+  <%- end else %>
   		Not specified
   <%- end %>
 </p>

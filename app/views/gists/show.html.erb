@@ -9,15 +9,22 @@
   <strong>Lang:</strong>
   <%= @gist.lang %>
 </p>
-
 <p>
   <strong>Description:</strong>
   <%= @gist.description %>
 </p>
 
+
 <p>
-  <strong>Owner:</strong>
-  <%= @gist.owner %>
+  <strong>User:</strong>
+  <%- if(@gist.user) %>
+  <%- if(!@gist.user.name.blank?) %>
+  	<%=  @gist.user.name %>
+	<%- else %>
+	<%=  @gist.user.nick %>
+  <%- end else %>
+  		Not specified
+  <%- end %>
 </p>
 
 <%= link_to 'Edit', edit_gist_path(@gist) %> |

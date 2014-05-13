@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513212451) do
+ActiveRecord::Schema.define(version: 20140513222022) do
 
   create_table "gists", force: true do |t|
     t.text     "snippet"
     t.string   "lang"
     t.string   "description"
-    t.string   "owner"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -28,7 +27,6 @@ ActiveRecord::Schema.define(version: 20140513212451) do
   create_table "posts", force: true do |t|
     t.text     "content"
     t.string   "date"
-    t.string   "owner"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -43,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140513212451) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "nick"
   end
 
 end
