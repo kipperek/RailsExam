@@ -9,6 +9,12 @@ class ApplicationController < ActionController::Base
   		redirect_to gists_path
   	end
   end
+
+  def is_user_admin?
+    unless !session[:user_id].nil? and current_user.is_admin
+      redirect_to posts_path
+    end
+  end
  
   private
  
