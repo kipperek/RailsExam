@@ -67,13 +67,23 @@ describe GistsController do
 	end
 
 	describe "destroy" do
-		it "destroys the requested gist" do
+		it "destroys the requested gist if logged" do
 		  User.create
 		  session[:user_id] = 1
 	      gist = Gist.create! valid_attributes
 	      expect {
 	        delete :destroy, {:id => gist.to_param}, valid_session
 	      }.to change(Gist, :count).by(-1)
+    	end
+
+    	it "destroys the requested gist if NOT logged" do
+		  
+		  session[:user_id] = nil
+
+	      gist = Gist.create! valid_attributes
+	      expect {
+	        delete :destroy, {:id => gist.to_param}, valid_session
+	      }.to change(Gist, :count).by(0)
     	end
 	end
 
