@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
       user.nick = auth["info"]["nickname"]
+      user.is_admin = false
     end
   end
 end
