@@ -1,4 +1,10 @@
 <%= form_for(@gist) do |f| %>
+<%
+allowed = Pygments.lexers.flatten.select.with_index{|a,i| (i+1) % 2 == 0}
+allowed = allowed.map{|a| a[:aliases][0]}
+allowed = allowed.delete_if{|a| (/-cpp/ =~ a || /-objc/ =~ a)}
+allowed = allowed.sort
+%>
   <% if @gist.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
@@ -17,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :lang %><br>
-    <%= f.text_field :lang %>
+    <%= f.select :lang, allowed %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
