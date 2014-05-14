@@ -15,9 +15,18 @@ describe GistsController do
 	end
 
 	describe "GET new" do
-	    it "assigns blank gist as @gist" do
+	    it "assigns blank gist as @gist if logged" do
+	    	User.create
+			session[:user_id] = 1
 	      get :new, {}, valid_session
 	      expect(assigns(:gist)).to be_a_new(Gist)
+	    end
+
+	     it "not assigning new gist if not logged" do
+	    	
+		  session[:user_id] = nil
+	      get :new, {}, valid_session
+	      expect(assigns(:gist)).to be_nil
 	    end
 	end
 
@@ -76,7 +85,7 @@ describe GistsController do
 	      }.to change(Gist, :count).by(-1)
     	end
 
-    	it "destroys the requested gist if NOT logged" do
+    	it "not destroys the requested gist if NOT logged" do
 		  
 		  session[:user_id] = nil
 
