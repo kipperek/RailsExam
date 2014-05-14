@@ -1,6 +1,9 @@
-<h1>Listing gists</h1>
-
-<table>
+<div class="page-header">
+    <h1>Listing gists</h1>
+</div>
+<div class="container">
+<%= link_to 'New Gist', new_gist_path, :class => 'btn btn-default' %>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Snippet</th>
@@ -20,6 +23,6 @@
 
 <br>
 
-<%= link_to 'New Gist', new_gist_path %>
-
 <%= paginate @gists %>
+
+</div>

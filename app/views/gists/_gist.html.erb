@@ -3,7 +3,7 @@
   <td><%= gist.lang %></td>
   <td><%= gist.description %></td>
   
-  <td><%= link_to 'Show', gist %></td>
-  <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-  <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to 'Show', gist, :class => 'btn btn-success' %></td>
+  <td><%= link_to 'Edit', edit_gist_path(gist), :class => 'btn btn-warning' %></td>
+  <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
 </tr>

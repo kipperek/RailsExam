@@ -1,6 +1,10 @@
-<h1>Editing gist</h1>
+<div class="page-header">
+    <h1>Editing gist</h1>
+</div>
 
-<%= render 'form' %>
+<div class="container">
+    <%= render 'form' %>
 
-<%= link_to 'Show', @gist %> |
-<%= link_to 'Back', gists_path %>
+    <%= link_to 'Show', @gist, :class => 'btn btn-success' %> 
+    <%= link_to 'Back', gists_path, :class => 'btn btn-primary' %>
+</div>
