@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513222022) do
+ActiveRecord::Schema.define(version: 20140514205758) do
 
   create_table "gists", force: true do |t|
     t.text     "snippet"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140513222022) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "nick"
+    t.boolean  "is_admin"
   end
 
 end

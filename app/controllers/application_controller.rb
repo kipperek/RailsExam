@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :current_user
+
+  def is_user_logged?
+  	unless !session[:user_id].nil?
+  		redirect_to gists_path
+  	end
+  end
  
   private
  
