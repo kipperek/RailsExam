@@ -1,36 +1,40 @@
-<%= form_for(@gist) do |f| %>
-<%
-allowed = Pygments.lexers.flatten.select.with_index{|a,i| (i+1) % 2 == 0}
-allowed = allowed.map{|a| a[:aliases][0]}
-allowed = allowed.delete_if{|a| (/-cpp/ =~ a || /-objc/ =~ a)}
-allowed = allowed.sort
-%>
-  <% if @gist.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
+<%- if(current_user)  %>
+  <%= form_for(@gist) do |f| %>
+  <%
+  allowed = Pygments.lexers.flatten.select.with_index{|a,i| (i+1) % 2 == 0}
+  allowed = allowed.map{|a| a[:aliases][0]}
+  allowed = allowed.delete_if{|a| (/-cpp/ =~ a || /-objc/ =~ a)}
+  allowed = allowed.sort
+  %>
+    <% if @gist.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
 
-      <ul>
-      <% @gist.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @gist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :snippet %><br>
+      <%= f.text_area :snippet %>
+    </div>
+    <div class="field">
+      <%= f.label :lang %><br>
+      <%= f.select :lang, allowed %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :snippet %><br>
-    <%= f.text_area :snippet %>
-  </div>
-  <div class="field">
-    <%= f.label :lang %><br>
-    <%= f.select :lang, allowed %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%- else %>
+  <div id="error">You are not logged in!</div>
+<%- end %>
