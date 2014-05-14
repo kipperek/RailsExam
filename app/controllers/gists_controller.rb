@@ -1,5 +1,6 @@
 class GistsController < ApplicationController
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
+  before_filter :is_user_logged?, :except => [:index, :show, :search]
 
   # GET /gists
   # GET /gists.json
