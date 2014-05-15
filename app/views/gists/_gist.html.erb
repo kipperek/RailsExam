@@ -1,5 +1,5 @@
 <tr class="post">
-  <td><%= gist.snippet %></td>
+  <td><%= raw Pygments.highlight(gist.snippet.length > 30 ? gist.snippet[0,30] + "..." : gist.snippet, lexer: gist.lang) %></td>
   <td><%= gist.lang %></td>
   <td><%= gist.description %></td>
   
