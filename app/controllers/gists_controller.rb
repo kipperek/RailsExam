@@ -5,7 +5,7 @@ class GistsController < ApplicationController
   # GET /gists
   # GET /gists.json
   def index
-    @gists = Gist.order("created_at desc").search(params[:lang],params[:desc]) # pagination
+    @gists = Gist.order("created_at desc").search(params[:desc]) # pagination
     @gists = Kaminari.paginate_array(@gists).page(params[:page])
     # @gists = Gist.all
   end

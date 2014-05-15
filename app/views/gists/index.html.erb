@@ -3,25 +3,7 @@
 </div>
 <div class="container">
 <%= link_to 'New Gist', new_gist_path, :class => 'btn btn-default' %>
-<div id="searchForm">
-  <form role="search">
-      
-      <div id="search">
-        <table><tr>
-          <td>Lang:
-          <%= text_field_tag :lang, params[:lang] %></td><tr>
-          <td>
-          Description:
-          <%= text_field_tag :desc, params[:desc] %><br>
-          </td>
-        </tr>
-      </table>
-      </div>
 
-      <div class="link3" >
-      <%= submit_tag "Search",  :snippet => nil,:class => 'btn btn-default' %>
-      </div>
-  </form>
 <table class="table table-striped">
   <thead>
     <tr>

@@ -1,25 +1,7 @@
 <div class="page-header">
     <h1>Listing posts</h1>
 </div>
-<div id="searchForm">
-  <form role="search">
-      
-      <div id="search">
-        <table><tr>
-          <td>Content:
-          <%= text_field_tag :lang, params[:content] %></td><tr>
-          <td>
-          Description:
-          <%= text_field_tag :desc, params[:desc] %><br>
-          </td>
-        </tr>
-      </table>
-      </div>
 
-      <div class="link3" >
-      <%= submit_tag "Search",  :snippet => nil,:class => 'btn btn-default' %>
-      </div>
-  </form>
 <div class="container">
     
     <table class="table table-striped">
