@@ -1,3 +1,4 @@
 tmp/
 log/
-
+db/migrate
+db/development.sqlite3
