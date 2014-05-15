@@ -27,7 +27,7 @@
   		Not specified
   <%- end %>
 </p>
-<%- if(current_user)  %>
+<%- if(@current_user)  %>
   <%= link_to 'Edit', edit_gist_path(@gist), :class => 'btn btn-warning' %> 
 <%- end %>
 <%= link_to 'Back', gists_path, :class => 'btn btn-info' %>

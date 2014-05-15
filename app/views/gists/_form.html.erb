@@ -1,4 +1,3 @@
-<%- if(current_user)  %>
   <%= form_for(@gist) do |f| %>
   <%
   allowed = Pygments.lexers.flatten.select.with_index{|a,i| (i+1) % 2 == 0}
@@ -37,4 +36,4 @@
   <% end %>
 <%- else %>
   <div id="error">You are not logged in!</div>
-<%- end %>
+
