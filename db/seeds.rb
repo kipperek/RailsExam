@@ -19,6 +19,5 @@ return 0;
 end
 
 for i in 0..50
-Post.create(content:'Projekt zespolowy w Ruby :)',
-date:'13.05.2014',description:'Post')
+Post.create(content:'Projekt zespolowy w Ruby :)',description:'Post')
 end
