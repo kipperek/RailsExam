@@ -3,8 +3,8 @@
 		<div class="caption">
 
 			  <%= raw Pygments.highlight(gist.snippet.length > 30 ? gist.snippet[0,30] + "..." : gist.snippet, lexer: gist.lang) %>
-			  <p><%= gist.lang %></p>
-			  <p><%= gist.description %></p>
+			  <p>Language: <%= gist.lang %></p>
+			  <p>Description: <%= gist.description %></p>
 			  
 			  <%= link_to 'Show', gist, :class => 'btn btn-success' %>
 			  <%- if(session[:user_id])  %>

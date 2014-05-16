@@ -1,13 +1,9 @@
-<div class="page-header">
-    <h1>Listing gists</h1>
-</div>
 <div class="container">
-<%= link_to 'New Gist', new_gist_path, :class => 'btn btn-default' %>
-
-<div class="row">
-  <%= render @gists %>
-</div>
-
-<%= paginate @gists %>
-
+    <div class="page-header">
+        <h1>Listing gists</h1>
+    </div>
+    <div class="row">
+        <%= render @gists %>
+    </div>
+    <%= paginate @gists %>
 </div>
