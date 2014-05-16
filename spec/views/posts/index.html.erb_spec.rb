@@ -18,7 +18,7 @@ describe "posts/index" do
 
   it "renders list of posts" do
     render
-    assert_select "tr>td", :text => "I like ruby !".to_s, :count => 2
-    assert_select "tr>td", :text => "MahPost".to_s, 	  :count => 2
+    assert_select "div>div>div>p", :text => "I like ruby !".to_s, :count => 2
+    assert_select "div>div>div>h3", :text => "MahPost".to_s, 	  :count => 2
   end
 end

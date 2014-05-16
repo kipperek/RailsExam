@@ -1,6 +1,7 @@
 class GistsController < ApplicationController
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
   before_filter :is_user_logged?, :except => [:index, :show, :search]
+  before_filter :is_user_owner?, :except => [:index, :show, :search]
 
   # GET /gists
   # GET /gists.json
@@ -102,6 +103,14 @@ class GistsController < ApplicationController
       end
 
       return gists
+    end
+
+    def is_user_owner?
+
+      if(@gist.user_id != session[:user_id])
+        redirect_to gists_path
+      end
+
     end
 
 end
