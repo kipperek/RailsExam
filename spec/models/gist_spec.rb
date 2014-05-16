@@ -17,5 +17,4 @@ describe Gist do
 	it "is invalid without a lang" do
 	FactoryGirl.build(:gist, lang: nil).should_not be_valid
 	end
-
 end
