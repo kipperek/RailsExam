@@ -5,7 +5,7 @@
   <h1>
   <%= @post.description %>
   </h1>
-
+  <%= @post.timestamp %><br/>
   <strong>By:</strong>
   <%- if(@post.user) %>
   <%- if(!@post.user.name.blank?) %>
