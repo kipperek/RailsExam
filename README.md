@@ -33,6 +33,7 @@ Zadania, które udało nam się wykonać:
 	
 Aby aplikacja pobrana z githuba dzialała poprawnie 
 musimy exportować dwa klucze do githuba poleceniem:
+
 export GITHUB_SECRET=a7b3ee878d2ce07375debe7c0265a367445ea76d
 
 export GITHUB_KEY=41810262d4ccdbd905dc 
