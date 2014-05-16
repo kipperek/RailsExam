@@ -1,8 +1,8 @@
 $(document).ready ->
-  $(".page").infinitescroll
+  $(".row").infinitescroll
     navSelector: "ul.pagination" # selector for the paged navigation (it will be hidden)
     nextSelector: "ul.pagination a[rel=next]" # selector for the NEXT link (to page 2)
-    itemSelector: ".row div.col-sm-6.col-md-4" # selector for all items you'll retrieve
+    itemSelector: ".row div.col-sm-12.col-md-12" # selector for all items you'll retrieve
 
 
 

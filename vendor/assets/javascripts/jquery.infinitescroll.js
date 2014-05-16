@@ -52,7 +52,7 @@
         navSelector: "ul.navigation",
         contentSelector: null, // rename to pageFragment
         extraScrollPx: 200,
-        itemSelector: ".row div.col-sm-6.col-md-4",
+        itemSelector: ".row",
         animate: false,
         pathParse: undefined,
         dataType: 'html',
