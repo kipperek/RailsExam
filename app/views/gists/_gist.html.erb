@@ -4,7 +4,7 @@
   <td><%= gist.description %></td>
   
   <td><%= link_to 'Show', gist, :class => 'btn btn-success' %></td>
-  <%- if(@current_user)  %>
+  <%- if(session[:user_id])  %>
   <td><%= link_to 'Edit', edit_gist_path(gist), :class => 'btn btn-warning' %></td>
   <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
   <%- end %>
