@@ -7,7 +7,7 @@ end
 
 def self.search(search)
     if search 
-        find(:all, :conditions => ['content  LIKE ?',"%#{search}%"])
+        find(:all, :conditions => ['content OR user_id  LIKE ?',"%#{search}%"])
     else
 	all
     end
