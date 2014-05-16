@@ -1,27 +1,9 @@
-<div class="page-header">
-    <h1>Listing posts</h1>
-</div>
-
 <div class="container">
-    
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Content</th>
-                
-                <th>Description</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
+    <div class="page-header">
+        <h1>Listing posts</h1>
+    </div>
 
-        <tbody class="page">
-            <%= render @posts %>
-        </tbody>
-    </table>
-    
-    <br>
-
+    <%= render @posts %>
+       
     <%= paginate @posts %>
 </div>

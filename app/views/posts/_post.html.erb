@@ -1,7 +1,10 @@
-<tr class="post">
-    <td><%= post.content %></td>
-    <td><%= post.description %></td>
-    <td><%= link_to 'Show', post, :class => 'btn btn-success' %></td>
-    <td><%= link_to 'Edit', edit_post_path(post), :class => 'btn btn-warning' %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
-</tr>
+<div>
+  <h2><%= link_to post.description, post_path(post) %></h2>
+ 
+  <small><em><%= post.timestamp %></em></small>
+ 
+  <p><%= truncate(strip_tags(post.content), length: 600) %></p>
+  <%= link_to 'Show', post, :class => 'btn btn-success' %>
+  <%= link_to 'Edit', edit_post_path(post), :class => 'btn btn-warning' %>
+  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+</div>
