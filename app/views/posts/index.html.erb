@@ -2,6 +2,12 @@
     <div class="page-header">
         <h1>Listing posts</h1>
     </div>
+   
+    <%- if(session[:user_id])  %>
+        <%= link_to 'New Gist', new_gist_path, :class => 'btn btn-default' %>
+        <br><br/>
+    <%- end %>
+
     <div class="row">
     	<%= render @posts %>
     </div>
