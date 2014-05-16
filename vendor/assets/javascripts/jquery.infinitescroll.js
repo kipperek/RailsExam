@@ -48,11 +48,11 @@
         debug: false,
         behavior: undefined,
         binder: $(window), // used to cache the selector
-        nextSelector: "div.navigation a:first",
-        navSelector: "div.navigation",
+        nextSelector: "ul.navigation a:first",
+        navSelector: "ul.navigation",
         contentSelector: null, // rename to pageFragment
-        extraScrollPx: 150,
-        itemSelector: "div.post",
+        extraScrollPx: 200,
+        itemSelector: ".row div.col-sm-6.col-md-4",
         animate: false,
         pathParse: undefined,
         dataType: 'html',
