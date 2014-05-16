@@ -1,7 +1,7 @@
 class GistsController < ApplicationController
   before_action :set_gist, only: [:show, :edit, :update, :destroy]
   before_filter :is_user_logged?, :except => [:index, :show, :search]
-  before_filter :is_user_owner?, :except => [:index, :show, :search, :new]
+  before_filter :is_user_owner?, :only => [:edit, :destroy, :update]
 
   # GET /gists
   # GET /gists.json
