@@ -45,7 +45,7 @@
             isBeyondMaxPage: false,
             currPage: 1
         },
-        debug: false,
+        debug: true,
         behavior: undefined,
         binder: $(window), // used to cache the selector
         nextSelector: "ul.navigation a:first",
