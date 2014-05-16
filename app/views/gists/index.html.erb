@@ -4,25 +4,9 @@
 <div class="container">
 <%= link_to 'New Gist', new_gist_path, :class => 'btn btn-default' %>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Snippet</th>
-      <th>Lang</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody class="page">
-    <%= render @gists %>
-  </tbody>
-
-</table>
-
-<br>
+<div class="row">
+  <%= render @gists %>
+</div>
 
 <%= paginate @gists %>
 
