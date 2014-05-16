@@ -6,12 +6,13 @@
 			  <p>Language: <%= gist.lang %></p>
 			  <p>Description: <%= gist.description %></p>
 			  
-			  <%= link_to 'Show', gist, :class => 'btn btn-success' %>
-			  <%- if(session[:user_id])  %>
+			   <%- if(session[:user_id])  %>
+                                  <%= link_to 'Show', gist, :class => 'btn btn-success' %>
 				  <%= link_to 'Edit', edit_gist_path(gist), :class => 'btn btn-warning' %>
 				  <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
-			  <%- end %>
-
+			  <%- else %>
+                                  <%= link_to 'Show', gist, :class => 'btn btn-success btn-block' %>
+                          <%- end %>
 		</div>
 	</div>
 </div>
