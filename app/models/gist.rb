@@ -5,7 +5,8 @@ class Gist < ActiveRecord::Base
 	
 def self.search(search)
     if search 
-        find(:all, :conditions => ['description  LIKE ?', '%#{search}%'])
+        @local = User.where('name LIKE ?', "%#{search}%")
+        return where(user_id: @local)
     else
         all
     end
