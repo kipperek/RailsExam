@@ -7,13 +7,13 @@ class GistsController < ApplicationController
   # GET /gists.json
   def index
     if(session[:user_id] && !session[:all_gists])
-      @gists = Gist.order("created_at snippet").find_user(session[:user_id])
+      @gists = Gist.order("created_at desc").find_user(session[:user_id])
     else
-      @gists = Gist.order("created_at snippet")
+      @gists = Gist.order("created_at desc")
     end
 
-    if(!params[:snippet].blank?)
-      @gists = @gists.search(params[:snippet]) 
+    if(!params[:desc].blank?)
+      @gists = @gists.search(params[:desc]) 
     end
 
     @gists = Kaminari.paginate_array(@gists).page(params[:page])# pagination
