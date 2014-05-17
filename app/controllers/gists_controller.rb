@@ -12,7 +12,7 @@ class GistsController < ApplicationController
       @gists = Gist.order("created_at snippet")
     end
 
-    if(!params[:desc].blank?)
+    if(!params[:snippet].blank?)
       @gists = @gists.search(params[:snippet]) 
     end
 
