@@ -32,3 +32,11 @@ describe "layouts/application" do
     assert_select "a[href=/gists]", :text => 'Gists', :count => 1
   end
 end
+
+describe "layouts/application" do
+
+  it "check Home link" do
+    render
+    assert_select 'a[class="navbar-brand"]', :count => 1
+  end
+end
