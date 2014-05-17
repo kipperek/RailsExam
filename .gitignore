@@ -2,3 +2,4 @@ tmp/
 log/
 db/migrate
 db/development.sqlite3
+db/test.sqlite3
