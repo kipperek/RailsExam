@@ -8,6 +8,7 @@ describe "posts/show" do
                     stub_model(Post,
                               :content => "mynewpost",
                               :description => "ilikeruby",
+                              :timestamp => "17 May 2014 13:40:54",
                               :user_id => ""
                     )
                   )

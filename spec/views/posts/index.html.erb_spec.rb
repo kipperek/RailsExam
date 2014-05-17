@@ -7,10 +7,12 @@ describe "posts/index" do
 	      stub_model(Post,
 	        :content => "I like ruby !",
 	        :description => "MahPost",
+                :timestamp => "17 May 2014 13:40:54",
 	      ),
 	      stub_model(Post,
 	        :content => "I like ruby !",
 	        :description => "MahPost",
+                :timestamp => "17 May 2014 13:40:54",
 	      )
     	]).page(1)
     )
