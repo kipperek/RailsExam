@@ -2,12 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-<<<<<<< HEAD
+
 .actual{
 	background: #00ccff;
-=======
+}
 .row2{
 	margin-left: -15px;
 margin-right: -15px;
->>>>>>> b8ac407b498307200fb1d304ce52856879f8728e
 }
