@@ -43,14 +43,6 @@ end
 
 describe "layouts/application" do
 
-  it "check Search input" do
-    render
-    assert_select 'input[placeholder="Search"]', :count => 1
-  end
-end
-
-describe "layouts/application" do
-
   it "check search button" do
     render
     assert_select 'button[type="submit"]', :count => 1
