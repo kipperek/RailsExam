@@ -58,4 +58,4 @@ export GITHUB_KEY=41810262d4ccdbd905dc
 
 Aplikacja została udostępniona na Shelly Cloud:
 
-http://clopteam.shellyapp.com/
+http://railsexamfinal.shellyapp.com/
