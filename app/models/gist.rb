@@ -13,7 +13,7 @@ end
 
 def self.find_user(search)
     if search 
-        find(:all, :conditions => ['user_id LIKE ?', "#{search}"])
+        find(:all, :conditions => ['user_id =?', "#{search}"])
     else
         all
     end
