@@ -3,7 +3,7 @@
         <h1>Posts</h1>
     </div>
    
-    <%- if(session[:user_id])  %>
+    <%- if(session[:user_id] && User.find(session[:user_id]).is_admin)  %>
         <%= link_to 'New Post', new_post_path, :class => 'btn btn-default' %>
         <br><br/>
     <%- end %>

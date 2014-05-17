@@ -25,7 +25,7 @@
 
 
 <br> 
-    <%- if(session[:user_id])  %>
+    <%- if(session[:user_id] && User.find(session[:user_id]).is_admin)  %>
     <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-warning' %>
      <%- end %>
     <%= link_to 'Back', posts_path, :class => 'btn btn-primary' %>
