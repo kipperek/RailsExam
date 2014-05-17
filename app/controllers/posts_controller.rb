@@ -6,8 +6,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order("created_at desc").search(params[:desc]) # pagination
-    @posts = Kaminari.paginate_array(@posts).page(params[:page])
+    @posts = Post.order("created_at desc") 
+    
+    if(!params[:desc].blank?)
+      @posts = @posts.search(params[:desc]) 
+    end
+
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]) # pagination
     # @posts = Post.all
   end
 
