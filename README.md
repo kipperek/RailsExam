@@ -36,7 +36,8 @@ Stworzyliśmy testy dla:
 Zadania, które udało nam się wykonać:
 
 	Wygląd strony przy użyciu bootstrapa
-	Wyszukiwanie gistów i postów
+	Wyszukiwanie postów po content
+	Wyszukiwanie gistów po nazwie użytkownika
 	Generatory dla gistów i postów
 	Walidacja danych w formularzu
 	Kolorowanie gistów
@@ -49,12 +50,6 @@ Zadania, które udało nam się wykonać:
 	Aplikacjia posiada 3 modele:gist,post,user
 	
 	
-Aby aplikacja pobrana z githuba dzialała poprawnie 
-musimy exportować dwa klucze do githuba poleceniem:
-
-export GITHUB_SECRET=a7b3ee878d2ce07375debe7c0265a367445ea76d
-
-export GITHUB_KEY=41810262d4ccdbd905dc 
 
 Aplikacja została udostępniona na Shelly Cloud:
 
