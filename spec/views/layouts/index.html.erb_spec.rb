@@ -12,7 +12,7 @@ describe "layouts/application" do
 
   it "check login name label" do
     render
-    assert_select "a", :text => 'Nowak', :count => 1
+    assert_select "a[href=#]", :text => 'Nowak', :count => 1
   end
 end
 
@@ -20,7 +20,7 @@ describe "layouts/application" do
 
   it "check signout link" do
     render
-    assert_select "a", :text => 'Sign out', :count => 1
+    assert_select "a[href=/signout]", :text => 'Sign out', :count => 1
   end
 end
 
@@ -29,6 +29,6 @@ describe "layouts/application" do
 
   it "check Gists link" do
     render
-    assert_select "a", :text => 'Gists', :count => 1
+    assert_select "a[href=/gists]", :text => 'Gists', :count => 1
   end
 end
