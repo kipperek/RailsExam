@@ -22,8 +22,9 @@ describe "gists/index" do
 
   it "renders list of gists" do
     render
-    assert_select "tr>td", :text => "main".to_s,   :count => 2
-    assert_select "tr>td", :text => "text".to_s,        :count => 2
-    assert_select "tr>td", :text => "i like ruby".to_s, :count => 2
+    assert_select "div>pre", :text => "main
+".to_s,   :count => 2
+    assert_select "div>p", :text => "Language: text".to_s,        :count => 2
+    assert_select "div>p", :text => "Description: i like ruby".to_s, :count => 2
   end
 end
