@@ -28,3 +28,29 @@ describe "gists/index" do
     assert_select "div>p", :text => "Description: i like ruby".to_s, :count => 2
   end
 end
+
+describe "gists/index" do
+    before(:each) do
+    assign(:gists, Kaminari.paginate_array(
+          [
+            stub_model(Gist,
+              :snippet => "main",
+              :lang => "text",
+              :description => "i like ruby",
+              :user_id => ""
+            ),
+            stub_model(Gist,
+              :snippet => "main",
+              :lang => "text",
+              :description => "i like ruby",
+              :user_id => ""
+            )
+          ]).page(1)
+    )
+  end
+
+  it "check if there is a show buttons" do
+    render
+    assert_select "a", :text => 'Show', :count => 2
+  end
+end
