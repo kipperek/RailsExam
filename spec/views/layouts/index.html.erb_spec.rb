@@ -15,3 +15,11 @@ describe "layouts/application" do
     assert_select "a", :text => 'Nowak', :count => 1
   end
 end
+
+describe "layouts/application" do
+
+  it "check signout link" do
+    render
+    assert_select "a", :text => 'Sign out', :count => 1
+  end
+end
