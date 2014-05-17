@@ -1,6 +1,15 @@
 <div class="container">
     <div class="page-header">
         <h1>Listing gists</h1>
+         <%- if(session[:user_id])  %>
+           <%- if(!session[:all_gists])  %>
+             <%= link_to 'My gists', "/gists/mygists", :class => 'btn btn-default actual' %>
+             <%= link_to 'All gists', "/gists/allgists", :class => 'btn btn-default' %>
+            <%- else %>  
+              <%= link_to 'My gists',"/gists/mygists", :class => 'btn btn-default' %>
+              <%= link_to 'All gists', "/gists/allgists", :class => 'btn btn-default  actual' %>        
+           <%- end %>
+          <%- end %>
     </div>
 
    <%- if(session[:user_id])  %>

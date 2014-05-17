@@ -2,7 +2,7 @@ require 'spec_helper'
 
 
 describe GistsController do
-	let(:valid_attributes) { { "lang" => "java", "description" => "some desc", "snippet" => "Some text" } }
+	let(:valid_attributes) { { "lang" => "java", "description" => "some desc", "snippet" => "Some text", "user_id" => 1 } }
 	let(:invalid_attributes) { { "lang" => "asdasdasdas", "description" => "some desc", "snippet" => "Some text" } }
 	let(:valid_session) { {} }
 

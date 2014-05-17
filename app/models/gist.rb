@@ -10,4 +10,14 @@ def self.search(search)
         all
     end
 end
+
+def self.find_user(search)
+    if search 
+        find(:all, :conditions => ['user_id LIKE ?', "#{search}"])
+    else
+        all
+    end
+end
+
+
 end

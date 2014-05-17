@@ -3,8 +3,8 @@ MyGists::Application.routes.draw do
   root :to => 'posts#index'
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
-
-
+  get "/gists/mygists" => "gists#setmygists"
+  get "/gists/allgists" => "gists#setallgists"
   resources :posts
 
   resources :gists

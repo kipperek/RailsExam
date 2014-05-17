@@ -6,8 +6,17 @@ class GistsController < ApplicationController
   # GET /gists
   # GET /gists.json
   def index
-    @gists = Gist.order("created_at desc").search(params[:desc]) # pagination
-    @gists = Kaminari.paginate_array(@gists).page(params[:page])
+    if(session[:user_id] && !session[:all_gists])
+      @gists = Gist.order("created_at desc").find_user(session[:user_id])
+    else
+      @gists = Gist.order("created_at desc")
+    end
+
+    if(!params[:desc].blank?)
+      @gists = @gists.search(params[:desc]) 
+    end
+
+    @gists = Kaminari.paginate_array(@gists).page(params[:page])# pagination
     # @gists = Gist.all
   end
 
@@ -60,6 +69,22 @@ class GistsController < ApplicationController
   # DELETE /gists/1.json
   def destroy
     @gist.destroy
+    respond_to do |format|
+      format.html { redirect_to gists_url }
+      format.json { head :no_content }
+    end
+  end
+
+  def setmygists
+   session[:all_gists] = false
+   respond_to do |format|
+      format.html { redirect_to gists_url }
+      format.json { head :no_content }
+    end
+  end
+
+  def setallgists
+    session[:all_gists] = true;
     respond_to do |format|
       format.html { redirect_to gists_url }
       format.json { head :no_content }
