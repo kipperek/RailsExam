@@ -5,7 +5,10 @@ class Gist < ActiveRecord::Base
 	
 def self.search(search)
     if search 
-        find(:all, :conditions => ['description  LIKE ? OR snippet LIKE ?', '%#{search}%', '%#{search}%'])
+        @f = find(:all, :conditions => ['description  LIKE ?', '%#{search}%'])
+@s = find(:all, :conditions => ['content  LIKE ?', '%#{search}%'])
+return @s + @f
+
     else
         all
     end
