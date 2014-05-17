@@ -1,10 +1,26 @@
 railsexam:
-  export GITHUB_SECRET=a7b3ee878d2ce07375debe7c0265a367445ea76d
-  export GITHUB_KEY=41810262d4ccdbd905dc
   ruby_version: 2.0.0 # 2.1.0, 2.0.0, jruby, rbx, 1.9.3, 1.9.2 or ree-1.8.7
   environment: production # RAILS_ENV
   domains:
     - railsexam.shellyapp.com
+  servers:
+    app1:
+      size: large
+      thin: 4
+      # delayed_job: 1
+      # sidekiq: 1
+      # clockwork: on
+      # whenever: on
+      # elasticsearch: on
+      databases:
+        - postgresql
+        # - mongodb
+        # - redis
+clopteam:
+  ruby_version: 2.0.0 # 2.1.0, 2.0.0, jruby, rbx, 1.9.3, 1.9.2 or ree-1.8.7
+  environment: production # RAILS_ENV
+  domains:
+    - clopteam.shellyapp.com
   servers:
     app1:
       size: large
