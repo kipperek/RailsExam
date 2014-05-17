@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140513222022) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "nick"
+    t.boolean  "is_admin"
   end
 
 end
