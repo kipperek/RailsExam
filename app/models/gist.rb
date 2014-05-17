@@ -5,7 +5,7 @@ class Gist < ActiveRecord::Base
 	
 def self.search(search)
     if search 
-        @f = find(:all, :conditions => ['description  LIKE ?', '%#{search}%'])
+        find(:all, :conditions => ['description  LIKE ?', '%#{search}%'])
     else
         all
     end
