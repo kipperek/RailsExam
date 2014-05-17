@@ -59,4 +59,5 @@ group :development, :test do
     gem 'rspec-rails'
 end
 gem 'factory_girl_rails', '~> 4.4.1'
-
+gem 'pg'
+gem 'shelly-dependencies'
