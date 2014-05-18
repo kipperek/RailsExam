@@ -2,7 +2,7 @@
 	<div class="thumbnail">
 		<div class="caption">
 
-			  <%= raw Pygments.highlight(gist.snippet.length > 30 ? gist.snippet[0,30] + "..." : gist.snippet, lexer: gist.lang) %>
+			  <%= raw Pygments.highlight(gist.snippet.length > 15 ? gist.snippet[0,15] + "..." : gist.snippet, lexer: gist.lang) %>
 			  <p>Language: <%= gist.lang %></p>
 			  <p>Description: <%= gist.description %></p>
 			  
