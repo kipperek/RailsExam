@@ -1,5 +1,8 @@
 
 [![Build Status](https://magnum.travis-ci.com/kipperek/RailsExam.svg?token=GoDu5VzyqcjAPGUVXVHu)](https://magnum.travis-ci.com/kipperek/RailsExam)
+
+UWAGA! Testy wykonują się poprawnie, niestety Travis CI nie jest w pełni darmowy i skończyła nam się trialowa subskrypcja na ten projekt, więc Travis nie zdążył zbudować odpowiedniego buildu
+
 RailsExam
 =========
 
