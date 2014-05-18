@@ -10,11 +10,12 @@ class GistsController < ApplicationController
       @gists = Gist.order("created_at desc").find_user(session[:user_id])
     else
       @gists = Gist.order("created_at desc")
-    end
-
-    if(!params[:desc].blank?)
-      @gists = @gists.search(params[:desc]) 
-    end
+      if(!params[:desc].blank?)
+        @gists = @gists.search(params[:desc]) 
+        end
+     end
+    
+   
 
     @gists = Kaminari.paginate_array(@gists).page(params[:page])# pagination
     # @gists = Gist.all
