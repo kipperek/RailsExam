@@ -54,6 +54,7 @@ Zadania, które udało nam się wykonać:
 	
 	
 
+
 Aplikacja została udostępniona na Shelly Cloud:
 
 http://railsexamfinal.shellyapp.com/
