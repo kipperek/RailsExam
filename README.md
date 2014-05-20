@@ -1,5 +1,4 @@
-
-[![Build Status](https://magnum.travis-ci.com/kipperek/RailsExam.svg?token=GoDu5VzyqcjAPGUVXVHu)](https://magnum.travis-ci.com/kipperek/RailsExam)
+[![Build Status](https://travis-ci.org/kipperek/RailsExam.svg)](https://travis-ci.org/kipperek/RailsExam)
 
 RailsExam
 =========
