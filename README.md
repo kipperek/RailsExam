@@ -47,7 +47,7 @@ Zadania, które udało nam się wykonać:
 	Dodanie Administratora
 	Nadanie praw na CRUD użytkownikowi zalogowanemu
 	Gość może tylko oglądać posty/gisty
-	Aplikacjia posiada 3 modele:gist,post,user
+	Aplikacja posiada 3 modele: gist, post, user
 	
 	
 
